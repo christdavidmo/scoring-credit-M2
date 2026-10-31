@@ -1,0 +1,10 @@
+# Thème de l'interface — à placer dans A_memoire/.streamlit/config.toml
+# Colore les curseurs, cases à cocher et contours de saisie avec le bleu pétrole.
+
+[theme]
+base = "light"
+primaryColor = "#0F6E6E"
+backgroundColor = "#F7F8FA"
+secondaryBackgroundColor = "#EEF2F5"
+textColor = "#141B26"
+font = "sans serif"
