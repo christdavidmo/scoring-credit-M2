@@ -525,7 +525,7 @@ st.markdown("""
     <div class="bandeau-sur">Outil d'aide à la décision</div>
     <div class="bandeau-titre">Scoring du risque de crédit</div>
   </div>
-  <div class="bandeau-info">Modèle LightGBM réglé<br>AUC 0,7224 sur les prêts de 2017</div>
+  <div class="bandeau-info">Modèle LightGBM réglé<br>69 % des défauts détectés · F1 0,473 (prêts de 2017)</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -582,18 +582,24 @@ et comprenez sur quels éléments du dossier repose la décision.</div>
 
 <div class="grille3" style="margin-top:0">
   <div class="tuile">
-    <div class="chiffre-v">1 045 257</div>
-    <div class="chiffre-l">prêts ayant servi à l'apprentissage du modèle, de 2012 à 2016</div>
+    <div class="chiffre-v">69 %</div>
+    <div class="chiffre-l">des défauts détectés au seuil de 0,5, sur 169 300 prêts de 2017 jamais vus
+      pendant l'apprentissage</div>
   </div>
   <div class="tuile">
-    <div class="chiffre-v">0,7224</div>
-    <div class="chiffre-l">AUC mesurée sur 169 300 prêts de 2017, jamais vus pendant l'apprentissage</div>
+    <div class="chiffre-v">0,473</div>
+    <div class="chiffre-l">de F1, le meilleur compromis des modèles testés entre défauts détectés et
+      alertes justes (36 % au seuil de 0,5)</div>
   </div>
   <div class="tuile">
-    <div class="chiffre-v">+0,041</div>
-    <div class="chiffre-l">point d'AUC gagné par rapport à la seule note attribuée par LendingClub</div>
+    <div class="chiffre-v">13 s</div>
+    <div class="chiffre-l">pour réentraîner le modèle sur 1 045 257 prêts, contre 4 minutes pour
+      un réseau de neurones</div>
   </div>
 </div>
+
+<div class="chiffre-l" style="margin:-0.4rem 0 1.2rem">En complément, indépendamment du seuil :
+AUC de 0,7224, contre 0,681 pour la seule note attribuée par LendingClub.</div>
 
 <div class="avis">Cet outil suggère une décision, il ne la prend pas : la décision finale appartient
 au comité de crédit. Le modèle a été construit à des fins académiques sur des données publiques
