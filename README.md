@@ -51,11 +51,11 @@ Les données ne sont pas incluses dans ce dépôt.
 
 | Modèle | AUC | F1 | Rappel | Précision | Temps (3 plis) |
 |---|---|---|---|---|---|
-| **LightGBM** | **0,726** | **0,447** | 0,668 | 0,337 | 34 s |
-| XGBoost | 0,725 | 0,446 | 0,659 | 0,339 | 38 s |
-| MLP | 0,724 | 0,445 | 0,683 | 0,332 | 358 s |
-| Random Forest | 0,722 | 0,444 | 0,600 | 0,353 | 179 s |
-| Régression logistique | 0,721 | 0,444 | 0,637 | 0,342 | 28 s |
+| **LightGBM** | **0,726** | **0,447** | 0,668 | 0,337 | 29 s |
+| XGBoost | 0,725 | 0,446 | 0,659 | 0,339 | 34 s |
+| MLP | 0,724 | 0,445 | 0,683 | 0,332 | 365 s |
+| Random Forest | 0,722 | 0,444 | 0,600 | 0,353 | 158 s |
+| Régression logistique | 0,721 | 0,444 | 0,637 | 0,342 | 24 s |
 | Note LendingClub | 0,697 | | | | |
 
 LightGBM obtient la meilleure AUC et le meilleur F1, se classe premier ou à égalité chaque année, et s'entraîne dix fois plus vite que le réseau de neurones. Les écarts avec XGBoost et le MLP restent faibles : le choix est confirmé par le temps de calcul, le faible surapprentissage et l'explicabilité exacte.
